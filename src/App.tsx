@@ -51,7 +51,7 @@ function App() {
       },
     ],
     {
-      basename: "CinePalace",
+      basename: "/CinePalace/",
     },
   );
 
