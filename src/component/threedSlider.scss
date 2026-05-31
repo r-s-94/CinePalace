@@ -1,0 +1,148 @@
+@use "../variables.scss" as x;
+
+.slider-section {
+  width: 90%;
+  height: 75vh;
+  margin: 5rem auto;
+  padding: 5rem 0;
+  @include x.center-content();
+  column-gap: 3rem;
+  box-shadow: 0 12px 40px rgba(75, 75, 75, 0.5);
+  border-radius: 0.2rem;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../assets/Cinema-outsite.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__canvas {
+    width: 75rem;
+    height: 20rem;
+    margin: auto 0;
+    @include x.center-content();
+  }
+
+  &__slider {
+    width: 0;
+    height: 0;
+    transform-style: preserve-3d;
+    @include x.center-content();
+    transition: all 0.5s ease-in-out;
+  }
+
+  &__cart {
+    position: absolute;
+    background-color: x.$cinestar-primary-color;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.3rem;
+    border: 1px solid x.$cinestar-gray-color;
+    border-radius: 0.2rem;
+    box-shadow: 0 0 10px 6px rgba(75, 75, 75, 0.5);
+  }
+
+  .active-cart {
+    width: 23rem;
+    height: 40rem;
+    padding: 1rem;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .film-cart {
+    transform: translateZ(25rem);
+  }
+
+  .film-cart2 {
+    transform: rotateY(72deg) translateZ(25rem);
+  }
+
+  .film-cart3 {
+    transform: rotateY(144deg) translateZ(25rem);
+  }
+
+  .film-cart4 {
+    transform: rotateY(-144deg) translateZ(25rem);
+  }
+
+  .film-cart5 {
+    transform: rotateY(-72deg) translateZ(25rem);
+  }
+
+  &__img-container {
+    width: 100%;
+    height: 100%;
+    margin: 0.1rem auto;
+    overflow: hidden;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__img:hover {
+    scale: 1.1;
+  }
+
+  .hidden {
+    opacity: 0;
+  }
+
+  .show {
+    opacity: 1;
+  }
+
+  .prev-card,
+  .next-card {
+    width: 20rem;
+    height: 30rem;
+    transition: all 0.5s ease-in-out;
+  }
+
+  &__category {
+    margin-top: 0.3rem;
+    text-align: left;
+    font-size: 0.8rem;
+    color: x.$cinestar-gray-color2;
+  }
+
+  &__headline {
+    margin: 1rem auto;
+    font-size: 1.3rem;
+    color: x.$cinestar-gray-color2;
+  }
+
+  &__film-options {
+    width: 100%;
+    @include x.center-content();
+    column-gap: 0.3rem;
+  }
+
+  &__more-info-button,
+  &__buy-ticket-button {
+    width: 100%;
+    margin: 0 0 0.1rem 0.1rem;
+    @include x.center-content();
+    column-gap: 0.3rem;
+    font-size: 17px;
+  }
+
+  &__more-info-icon,
+  &__buy-ticket-icon {
+    width: 1.5rem;
+  }
+
+  &__prev-button,
+  &__next-button {
+    width: 2.7rem;
+    box-shadow: 0 0 10px 6px rgba(75, 75, 75, 0.5);
+  }
+
+  &__prev-icon,
+  &__next-icon {
+    width: 2.3rem;
+  }
+}

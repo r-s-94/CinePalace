@@ -1,0 +1,98 @@
+@use "../variables" as x;
+
+.movie-detail-section {
+  &__back-button {
+    width: 2.3rem;
+    margin: 3rem 0 0 5%;
+    background-color: x.$cinestar-primary-color;
+    border: none;
+  }
+
+  &__info-main-container {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__info-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 3rem;
+  }
+
+  &__headline,
+  &__text,
+  &__category,
+  &__hall {
+    margin: 0 3rem;
+    color: x.$cinestar-gray-color;
+  }
+
+  &__headline {
+    font-size: 1.7rem;
+    font-family: x.$cinestar-font-art;
+  }
+
+  &__text {
+    line-height: 1.5rem;
+  }
+
+  &__text,
+  &__category,
+  &__hall {
+    font-size: 1.1rem;
+  }
+
+  &__slider-main-container {
+    width: 50%;
+    height: 50vh;
+    margin: 5rem auto;
+    @include x.center-content();
+    column-gap: 17rem;
+  }
+
+  &__canvas {
+    @include x.center-content();
+    border: 1px solid green;
+  }
+
+  &__img {
+    position: absolute;
+    width: 25rem;
+    height: 35rem;
+    object-fit: cover;
+  }
+
+  &__prev-button,
+  &__next-button {
+    width: 2.7rem;
+  }
+
+  &__prev-icon,
+  &__next-icon {
+    width: 3rem;
+  }
+
+  .active-img {
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .inactive-img {
+    opacity: 0;
+  }
+
+  &__buy-ticket-button {
+    width: 11rem;
+    margin: 0 3rem;
+    font-size: 17px;
+    column-gap: 0.5rem;
+  }
+
+  &__buy-ticket-icon {
+    width: 1.5rem;
+  }
+}

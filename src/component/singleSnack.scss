@@ -1,0 +1,33 @@
+@use "../variables" as x;
+
+.single-snack {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0.5rem;
+
+  &__img {
+    width: 7rem;
+    height: 7rem;
+    object-fit: cover;
+    border-radius: 0.2rem;
+  }
+
+  &__choose-size {
+    width: 5rem;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__select {
+    width: 3.1rem;
+    height: 1.5rem;
+    @include x.center-content();
+    background-color: x.$cinestar-primary-color;
+    color: x.$cinestar-secondary-color;
+    font-size: 1.1rem;
+    border-radius: 0.2rem;
+  }
+}

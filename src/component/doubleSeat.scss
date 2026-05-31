@@ -1,0 +1,39 @@
+@use "../variables" as x;
+
+.double-seat {
+  position: relative;
+  @include x.center-column-content();
+  row-gap: 0.5rem;
+}
+
+.double-seat-img {
+  width: 2.3rem;
+  transform: rotateZ(180deg);
+}
+
+.user-img {
+  position: absolute;
+  top: 0;
+  width: 1.5rem;
+}
+
+.seats {
+  width: 100%;
+  @include x.center-content();
+  column-gap: 0.3rem;
+}
+
+.no-button-style {
+  border: none;
+  background-color: x.$cinestar-gray-color;
+}
+
+.block:hover {
+  cursor: not-allowed;
+}
+
+.block-seat {
+  position: absolute;
+  top: 0;
+  width: 1.7rem;
+}

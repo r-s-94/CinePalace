@@ -1,0 +1,16 @@
+@use "variables" as x;
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /*background-color: #333;*/
+  font-family: x.$cinestar-font-art;
+  background-color: x.$cinestar-primary-color;
+}

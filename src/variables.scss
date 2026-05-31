@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Niconne&display=swap");
+
+$cinestar-focus-font-art: "Niconne", cursive;
+$cinestar-font-art: Arial, Helvetica, sans-serif;
+$cinestar-primary-color: #111;
+/*$cinestar-secondary-color: #d4af37;*/
+/*$cinestar-secondary-color: #d3af37;*/
+$cinestar-secondary-color: #c9a63a;
+$cinestar-gray-color: #ccc;
+$cinestar-gray-color2: #eee;
+/*$cinestar-red-color: #9e1b32;*/
+$cinestar-red-color: #c62839;
+
+@mixin center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin center-column-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin primary-button-options {
+  background-color: $cinestar-red-color;
+  color: $cinestar-secondary-color;
+  /*color: white;*/
+  transition: all 0.3s ease-in-out;
+}
+
+@mixin delete-button-option {
+  background-color: $cinestar-red-color;
+  color: $cinestar-gray-color;
+  /*color: white;*/
+  transition: all 0.3s ease-in-out;
+}
+
+@mixin delete-button-option-hover {
+  background-color: $cinestar-gray-color;
+  color: $cinestar-red-color;
+  /*color: white;*/
+  transition: all 0.3s ease-in-out;
+}
+
+@mixin secondary-button-options {
+  background-color: $cinestar-primary-color;
+  color: $cinestar-secondary-color;
+  border-color: $cinestar-gray-color;
+  transition: all 0.3s ease-in-out;
+}
+
+@mixin accent-button-options {
+  background-color: $cinestar-gray-color2;
+  color: $cinestar-primary-color;
+  border-color: $cinestar-gray-color;
+  transition: all 0.3s ease-in-out;
+}
+
+.button {
+  height: 2.5rem;
+  @include center-content();
+  border-radius: 0.2rem;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.primary-button {
+  @include primary-button-options();
+}
+
+.secondary-button {
+  @include secondary-button-options();
+}
+
+.accent-button {
+  @include accent-button-options();
+}
+
+.accent-button2 {
+  @include accent-button-options();
+}
+
+.primary-button:hover,
+.secondary-button:hover {
+  background-color: $cinestar-gray-color2;
+  color: $cinestar-primary-color;
+}
+
+.accent-button:hover {
+  background-color: $cinestar-red-color;
+}
+
+.accent-button2:hover {
+  background-color: $cinestar-primary-color;
+  color: $cinestar-secondary-color;
+}
+
+.delete-button {
+  @include delete-button-option();
+}
+
+.delete-button:hover {
+  @include delete-button-option-hover();
+}
+
+.hover:hover {
+  cursor: pointer;
+}
+
+.disable-button {
+  background-color: #ccc;
+}
+
+.back-icon {
+  color: $cinestar-gray-color2;
+  transition: all 0.3s ease-in-out;
+}
+
+.back-icon:hover {
+  color: $cinestar-gray-color;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.no-link {
+  text-decoration: none;
+}
+
+.no-hover:hover {
+  cursor: context-menu;
+}

@@ -1,0 +1,13 @@
+@use "../variables.scss" as x;
+
+.overview-section {
+  &__headline {
+    margin: 3rem auto;
+    text-align: center;
+    font-family: x.$cinestar-focus-font-art;
+    font-size: 3rem;
+    font-weight: 400;
+    font-style: normal;
+    color: x.$cinestar-secondary-color;
+  }
+}
