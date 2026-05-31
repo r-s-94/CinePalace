@@ -15,40 +15,45 @@ import DataProtection from "./component/dataProtection";
 export const LOCAL_STORAGE_KEY = "Bookings";
 
 function App() {
-  const router = createBrowserRouter([
+  const router = createBrowserRouter(
+    [
+      {
+        path: "/",
+        element: <Overview />,
+      },
+      {
+        path: "movieInfo/:id",
+        element: <MovieDetail />,
+      },
+      {
+        path: "bookingMovie/:id",
+        element: <BookingMovie />,
+      },
+      {
+        path: "finishBooking",
+        element: <FinishBooking />,
+      },
+      {
+        path: "bookingOverview",
+        element: <BookingOverview />,
+      },
+      {
+        path: "editBooking/:id",
+        element: <EditBooking />,
+      },
+      {
+        path: "imprint",
+        element: <Imprint />,
+      },
+      {
+        path: "dataProtection",
+        element: <DataProtection />,
+      },
+    ],
     {
-      path: "/",
-      element: <Overview />,
+      basename: "CinePalace",
     },
-    {
-      path: "movieInfo/:id",
-      element: <MovieDetail />,
-    },
-    {
-      path: "bookingMovie/:id",
-      element: <BookingMovie />,
-    },
-    {
-      path: "finishBooking",
-      element: <FinishBooking />,
-    },
-    {
-      path: "bookingOverview",
-      element: <BookingOverview />,
-    },
-    {
-      path: "editBooking/:id",
-      element: <EditBooking />,
-    },
-    {
-      path: "imprint",
-      element: <Imprint />,
-    },
-    {
-      path: "dataProtection",
-      element: <DataProtection />,
-    },
-  ]);
+  );
 
   const [currentSliderIndex, setCurrentSliderIndex] = useState<number>(0);
   const [bookings, setBookings] = useState<Ticket[]>([]);
