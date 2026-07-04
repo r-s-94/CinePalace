@@ -132,8 +132,10 @@
 
 @media screen and (max-width: 600px) {
   .about-us-section {
+    padding-top: 0;
+
     &__headline {
-      margin: 0 auto 1rem auto;
+      margin: 1rem auto;
       font-size: 1.7rem;
     }
 
