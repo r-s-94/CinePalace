@@ -40,6 +40,8 @@
 
 @media screen and (max-width: 1000px) {
   .oppening-time-section {
+    height: 75vh;
+
     &__headline {
       font-size: 2rem;
     }
@@ -53,6 +55,8 @@
 
 @media screen and (max-width: 600px) {
   .oppening-time-section {
+    height: 80vh;
+
     &__headline {
       font-size: 1.7rem;
     }
