@@ -195,16 +195,18 @@
 
 @media screen and (max-width: 600px) {
   .booking-overview-section {
+    &__headline {
+      margin-top: 3rem;
+      font-size: 1.7rem;
+    }
+
     &__booking-overview {
       width: 17rem;
       max-width: 90%;
+      margin-top: 1.5rem;
       row-gap: 1.5rem;
       display: flex;
       flex-direction: column;
-    }
-
-    &__headline {
-      font-size: 1.7rem;
     }
 
     &__info,

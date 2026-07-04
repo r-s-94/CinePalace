@@ -7,12 +7,13 @@ import Contact from "../contact/contact";
 import OppeningTime from "../oppeningTime/oppeningTime";
 import Footer from "../footer/footer";
 import BackToTop from "../backToTop/backToTop";
+import Hero from "../hero/hero";
 
 export default function Overview() {
   return (
     <section className="overview-secetion">
       <Nav />
-
+      <Hero />
       <ThreeDSlider />
       <AboutUs />
       <OppeningTime />
