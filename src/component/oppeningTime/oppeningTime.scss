@@ -7,7 +7,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 70vh;
+  height: 75vh;
   padding-top: 3rem;
 
   &__headline {
@@ -40,8 +40,6 @@
 
 @media screen and (max-width: 1000px) {
   .oppening-time-section {
-    height: 75vh;
-
     &__headline {
       font-size: 2rem;
     }
