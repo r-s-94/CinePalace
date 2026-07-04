@@ -75,8 +75,6 @@ function App() {
       (value: number | ((prevValue: number) => number)) => void;
   */
 
-  //
-
   useEffect(() => {
     const loadBookings = () => {
       const getBookings = localStorage.getItem(LOCAL_STORAGE_KEY);
