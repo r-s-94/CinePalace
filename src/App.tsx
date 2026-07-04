@@ -1,17 +1,20 @@
 import "./App.scss";
-import MovieDetail from "./component/movieDetail";
-import Overview from "./component/overview";
-import BookingMovie from "./component/bookingMovie";
+import MovieDetail from "./component/movieDetail/movieDetail";
+import Overview from "./component/overview/overview";
+import BookingMovie from "./component/bookingMovie/bookingMovie";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { currentSliderIndexContent } from "./component/currentSliderIndexContent";
+import {
+  threeDSliderOptionsContent,
+  type ThreeDSliderOptions,
+} from "./threeDSliderOptionsContent";
 import { useEffect, useState } from "react";
 import type { Ticket } from "./bookingsContent";
 import { bookingsContent } from "./bookingsContent";
-import FinishBooking from "./component/finishBooking";
-import BookingOverview from "./component/bookingOverview";
-import EditBooking from "./component/editBooking";
-import Imprint from "./component/imprint";
-import DataProtection from "./component/dataProtection";
+import FinishBooking from "./component/finishBooking/finishBooking";
+import BookingOverview from "./component/bookingOverview/bookingOverview";
+import EditBooking from "./component/editBooking/editBooking";
+import Imprint from "./component/imprint/imprint";
+import DataProtection from "./component/dataProtection/dataProtection";
 export const LOCAL_STORAGE_KEY = "Bookings";
 
 function App() {
@@ -55,7 +58,11 @@ function App() {
     },
   );
 
-  const [currentSliderIndex, setCurrentSliderIndex] = useState<number>(0);
+  const [threeDSliderOptions, setThreeDSliderOptions] =
+    useState<ThreeDSliderOptions>({
+      currentSliderIndex: -1,
+      currentRotatePosition: 0,
+    });
   const [bookings, setBookings] = useState<Ticket[]>([]);
 
   /*  Diese Beispiel zeigt die Oder-Variante eines useState-Hooks + createContext mit Update-Funktion für einen useState-Hook. 
@@ -86,13 +93,13 @@ function App() {
 
   return (
     <>
-      <currentSliderIndexContent.Provider
-        value={{ currentSliderIndex, setCurrentSliderIndex }}
+      <threeDSliderOptionsContent.Provider
+        value={{ threeDSliderOptions, setThreeDSliderOptions }}
       >
         <bookingsContent.Provider value={{ bookings, setBookings }}>
           <RouterProvider router={router} />
         </bookingsContent.Provider>
-      </currentSliderIndexContent.Provider>
+      </threeDSliderOptionsContent.Provider>
     </>
   );
 }

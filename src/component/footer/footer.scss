@@ -1,0 +1,36 @@
+@use "../../variables.scss" as x;
+
+.footer {
+  margin-top: auto;
+  height: 3rem;
+  @include x.center-content();
+  column-gap: 5rem;
+  background-color: #333;
+
+  &__imprint,
+  &__data-protection,
+  &__copy-right,
+  &__border {
+    color: x.$cinestar-gray-color;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .footer {
+    height: 2.5rem;
+    font-size: 0.9rem;
+    column-gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    height: 7rem;
+    flex-direction: column;
+    row-gap: 1rem;
+
+    &__border {
+      display: none;
+    }
+  }
+}

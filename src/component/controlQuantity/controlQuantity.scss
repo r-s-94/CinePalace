@@ -1,0 +1,55 @@
+@use "../../variables" as x;
+
+.control-quantity {
+  margin-top: 1rem;
+  color: x.$cinestar-gray-color2;
+  @include x.center-content();
+  column-gap: 0.5rem;
+
+  &__minus-button,
+  &__plus-button {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.2rem;
+    @include x.center-content();
+    border-radius: 0.2rem;
+  }
+
+  &__quantitiy {
+    font-size: 1.2rem;
+  }
+}
+
+.disable {
+  color: x.$cinestar-gray-color;
+}
+
+@media screen and (max-width: 1000px) {
+  .control-quantity {
+    &__minus-button,
+    &__plus-button {
+      width: 1.3rem;
+      height: 1.3rem;
+      font-size: 1.1rem;
+    }
+
+    &__quantitiy {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .control-quantity {
+    &__minus-button,
+    &__plus-button {
+      width: 1.2rem;
+      height: 1.2rem;
+      font-size: 17px;
+    }
+
+    &__quantitiy {
+      font-size: 17px;
+    }
+  }
+}

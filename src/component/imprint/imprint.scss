@@ -1,0 +1,62 @@
+@use "../../variables" as x;
+
+.imprint {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: x.$cinestar-gray-color2;
+
+  &__headline {
+    margin: 5rem auto;
+    text-align: center;
+    font-family: x.$cinestar-focus-font-art;
+    font-size: 2.3rem;
+    color: x.$cinestar-secondary-color;
+  }
+
+  &__note {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+  &__infos {
+    margin: 3rem auto;
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .imprint {
+    &__headline {
+      font-size: 2rem;
+    }
+
+    &__note {
+      font-size: 1rem;
+    }
+
+    &__infos {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .imprint {
+    &__headline {
+      font-size: 1.7rem;
+    }
+
+    &__note {
+      font-size: 0.9rem;
+    }
+
+    &__infos {
+      font-size: 0.8rem;
+    }
+  }
+}

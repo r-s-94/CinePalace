@@ -1,0 +1,61 @@
+@use "../../variables" as x;
+
+.finish-booking {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  &__text {
+    margin: 10rem auto 3rem auto;
+    text-align: center;
+    font-size: 1.4rem;
+    color: x.$cinestar-gray-color2;
+  }
+
+  &__back-link {
+    font-size: 1.2rem;
+    @include x.center-content();
+    column-gap: 0.5rem;
+    color: x.$cinestar-gray-color2;
+  }
+
+  &__back-link:hover {
+    color: x.$cinestar-gray-color;
+  }
+
+  &__back-icon {
+    width: 2rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .finish-booking {
+    &__text {
+      font-size: 1.3rem;
+    }
+
+    &__back-kink {
+      font-size: 1.1rem;
+    }
+
+    &__back-icon {
+      width: 1.7rem;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .finish-booking {
+    &__text {
+      font-size: 1.2rem;
+    }
+
+    &__back-link {
+      font-size: 1rem;
+    }
+
+    &__back-icon {
+      width: 1.6rem;
+    }
+  }
+}

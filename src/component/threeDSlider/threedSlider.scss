@@ -1,0 +1,421 @@
+@use "../../variables.scss" as x;
+
+.slider-section {
+  margin: 0 auto;
+  padding-bottom: 5rem;
+  @include x.center-column-content();
+  column-gap: 3rem;
+  border-radius: 0.2rem;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../../assets/Cinema-outsite.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__headline {
+    margin: 5rem auto 3rem auto;
+    font-size: 2.3rem;
+    font-family: x.$cinestar-focus-font-art;
+    color: x.$cinestar-secondary-color;
+  }
+
+  &__buttons-and-slider {
+    @include x.center-content();
+    column-gap: 3rem;
+  }
+
+  &__canvas {
+    width: 63rem;
+    height: 50rem;
+    margin: auto 0;
+    @include x.center-content();
+    box-shadow: 0 16px 16px 0 rgba(75, 75, 75, 0.5);
+  }
+
+  &__slider {
+    width: 0;
+    height: 0;
+    transform-style: preserve-3d;
+    @include x.center-content();
+    transition: all 0.5s ease-in-out;
+  }
+
+  &__cart {
+    position: absolute;
+    background-color: x.$cinestar-primary-color;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.3rem;
+    border: 1px solid x.$cinestar-gray-color;
+    border-radius: 0.2rem;
+    box-shadow: 0 0 10px 6px rgba(75, 75, 75, 0.5);
+  }
+
+  .active-cart {
+    width: 23rem;
+    height: 40rem;
+    padding: 1rem;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .film-cart {
+    transform: translateZ(25rem);
+  }
+
+  .film-cart2 {
+    transform: rotateY(72deg) translateZ(25rem);
+  }
+
+  .film-cart3 {
+    transform: rotateY(144deg) translateZ(25rem);
+  }
+
+  .film-cart4 {
+    transform: rotateY(-144deg) translateZ(25rem);
+  }
+
+  .film-cart5 {
+    transform: rotateY(-72deg) translateZ(25rem);
+  }
+
+  &__img-container {
+    width: 100%;
+    height: 100%;
+    margin: 0.1rem auto;
+    overflow: hidden;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__img:hover {
+    scale: 1.1;
+  }
+
+  .hidden {
+    opacity: 0;
+  }
+
+  .show {
+    opacity: 1;
+  }
+
+  .prev-card,
+  .next-card {
+    width: 20rem;
+    height: 30rem;
+    transition: all 0.5s ease-in-out;
+  }
+
+  &__category {
+    margin-top: 0.3rem;
+    text-align: left;
+    font-size: 0.8rem;
+    color: x.$cinestar-gray-color2;
+  }
+
+  &__cart-headline {
+    margin: 1rem auto;
+    font-size: 1.3rem;
+    color: x.$cinestar-gray-color2;
+  }
+
+  &__film-options {
+    width: 100%;
+    @include x.center-content();
+    column-gap: 0.3rem;
+  }
+
+  &__more-info-button,
+  &__buy-ticket-button {
+    width: 100%;
+    height: 2.5rem;
+    margin: 0 0 0.1rem 0.1rem;
+    @include x.center-content();
+    column-gap: 0.3rem;
+    font-size: 17px;
+    border-radius: 0.2rem;
+  }
+
+  &__more-info-icon,
+  &__buy-ticket-icon {
+    width: 1.5rem;
+  }
+
+  &__prev-button,
+  &__next-button {
+    width: 2.7rem;
+    height: 2.7rem;
+    @include x.center-content();
+    background-color: x.$cinestar-primary-color;
+    color: x.$cinestar-secondary-color;
+    box-shadow: 0 0 10px 6px rgba(75, 75, 75, 0.5);
+    border: 2px solid x.$cinestar-gray-color;
+    border-radius: 0.2rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__prev-button {
+    margin-right: 7rem;
+  }
+
+  &__next-button {
+    margin-left: 7rem;
+  }
+
+  &__prev-button:hover,
+  &__next-button:hover {
+    background-color: x.$cinestar-gray-color;
+    color: x.$cinestar-primary-color;
+    border-color: x.$cinestar-primary-color;
+  }
+
+  &__prev-icon,
+  &__next-icon {
+    width: 2.3rem;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .slider-section {
+    &__canvas {
+      width: 60rem;
+    }
+
+    &__prev-button {
+      margin-right: 3rem;
+    }
+
+    &__next-button {
+      margin-left: 3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .slider-section {
+    &__canvas {
+      width: 45rem;
+      height: 45rem;
+    }
+
+    .film-cart {
+      transform: translateZ(25rem);
+    }
+
+    .film-cart2 {
+      transform: rotateY(72deg) translateZ(20rem);
+    }
+
+    .film-cart3 {
+      transform: rotateY(144deg) translateZ(20rem);
+    }
+
+    .film-cart4 {
+      transform: rotateY(-144deg) translateZ(20rem);
+    }
+
+    .film-cart5 {
+      transform: rotateY(-72deg) translateZ(20rem);
+    }
+
+    &__category {
+      font-size: 0.7rem;
+    }
+
+    &__cart-headline {
+      font-size: 20px;
+    }
+
+    .active-cart {
+      width: 20rem;
+      height: 37rem;
+    }
+
+    .prev-card,
+    .next-card {
+      width: 17rem;
+      height: 30rem;
+    }
+
+    &__prev-button {
+      margin-right: 1rem;
+    }
+
+    &__next-button {
+      margin-left: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .slider-section {
+    padding-bottom: 10rem;
+
+    &__headline {
+      font-size: 2rem;
+    }
+
+    &__canvas {
+      width: 35rem;
+      height: 40rem;
+    }
+
+    .film-cart {
+      transform: translateZ(15rem);
+    }
+
+    .film-cart2 {
+      transform: rotateY(72deg) translateZ(15rem);
+    }
+
+    .film-cart3 {
+      transform: rotateY(144deg) translateZ(15rem);
+    }
+
+    .film-cart4 {
+      transform: rotateY(-144deg) translateZ(15rem);
+    }
+
+    .film-cart5 {
+      transform: rotateY(-72deg) translateZ(15rem);
+    }
+
+    &__category {
+      font-size: 0.6rem;
+    }
+
+    &__cart-headline {
+      font-size: 18px;
+    }
+
+    .active-cart {
+      width: 17rem;
+      height: 34rem;
+      padding: 0.7rem;
+    }
+
+    .prev-card,
+    .next-card {
+      width: 15rem;
+      height: 27rem;
+    }
+
+    &__prev-button,
+    &__next-button {
+      position: absolute;
+      bottom: -3rem;
+      width: 2.5rem;
+      height: 2.3rem;
+    }
+
+    &__prev-button {
+      left: 35%;
+    }
+
+    &__next-button {
+      right: 35%;
+    }
+
+    &__prev-icon,
+    &__next-icon {
+      width: 2rem;
+    }
+
+    &__more-info-button,
+    &__buy-ticket-button {
+      height: 2.3rem;
+      font-size: 15px;
+    }
+
+    &__more-info-icon,
+    &__buy-ticket-icon {
+      width: 1.3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .slider-section {
+    padding-bottom: 7rem;
+
+    &__canvas {
+      width: 17rem;
+      height: 27rem;
+    }
+
+    .film-cart {
+      transform: translateZ(7rem);
+    }
+
+    .film-cart2 {
+      transform: rotateY(72deg) translateZ(7rem);
+    }
+
+    .film-cart3 {
+      transform: rotateY(144deg) translateZ(7rem);
+    }
+
+    .film-cart4 {
+      transform: rotateY(-144deg) translateZ(7rem);
+    }
+
+    .film-cart5 {
+      transform: rotateY(-72deg) translateZ(7rem);
+    }
+
+    &__category {
+      font-size: 0.5rem;
+    }
+
+    &__cart-headline {
+      font-size: 1rem;
+    }
+
+    .active-cart {
+      width: 10rem;
+      height: 23rem;
+      padding: 0.5rem;
+      z-index: 0;
+    }
+
+    .prev-card,
+    .next-card {
+      width: 10rem;
+      height: 20rem;
+    }
+
+    &__prev-button,
+    &__next-button {
+      bottom: 11rem;
+      width: 2.3rem;
+      height: 2rem;
+    }
+
+    &__prev-icon,
+    &__next-icon {
+      width: 1.7rem;
+    }
+
+    &__film-options {
+      flex-direction: column;
+      row-gap: 0.5rem;
+    }
+
+    &__more-info-button,
+    &__buy-ticket-button {
+      height: 2rem;
+      font-size: 0.9rem;
+    }
+
+    &__more-info-icon,
+    &__buy-ticket-icon {
+      width: 1.1rem;
+    }
+  }
+}

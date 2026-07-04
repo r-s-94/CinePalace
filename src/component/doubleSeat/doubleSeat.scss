@@ -1,0 +1,74 @@
+@use "../../variables.scss" as x;
+
+.double-seat {
+  position: relative;
+  @include x.center-column-content();
+  row-gap: 0.5rem;
+}
+
+.double-seat-img {
+  width: 2.3rem;
+  transform: rotateZ(180deg);
+}
+
+.user-img {
+  position: absolute;
+  top: 0;
+  width: 1.5rem;
+}
+
+.seats {
+  width: 100%;
+  @include x.center-content();
+  column-gap: 0.3rem;
+}
+
+.no-button-style {
+  border: none;
+  background-color: x.$cinestar-gray-color;
+}
+
+.block:hover {
+  cursor: not-allowed;
+}
+
+.block-seat {
+  position: absolute;
+  width: 1.7rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .double-seat-img {
+    width: 1.4rem;
+  }
+
+  .user-img {
+    width: 1.2rem;
+  }
+
+  .seats {
+    font-size: 15px;
+  }
+
+  .block-seat {
+    width: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .double-seat-img {
+    width: 15px;
+  }
+
+  .user-img {
+    width: 0.9rem;
+  }
+
+  .seats {
+    font-size: 8px;
+  }
+
+  .block-seat {
+    width: 1rem;
+  }
+}

@@ -1,0 +1,137 @@
+@use "../../variables" as x;
+
+.nav-section {
+  position: relative;
+  background-color: x.$cinestar-secondary-color;
+  height: 3rem;
+
+  &__headline {
+    position: absolute;
+    top: 0.5rem;
+    left: 7%;
+    font-family: x.$cinestar-focus-font-art;
+    font-size: 1.7rem;
+    color: x.$cinestar-primary-color;
+  }
+
+  &__nav-bar {
+    width: 100%;
+    height: 3rem;
+    background-color: x.$cinestar-secondary-color;
+    @include x.center-content();
+    column-gap: 5rem;
+    transition: all 0.5s ease-in-out;
+    z-index: 1;
+  }
+
+  &__link {
+    color: x.$cinestar-primary-color;
+    text-decoration: none;
+  }
+
+  &__hamburger-menu {
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    width: 2rem;
+    height: 2rem;
+    @include x.center-column-content();
+    row-gap: 4px;
+    z-index: 2;
+  }
+
+  &__line {
+    width: 1.8rem;
+    height: 4px;
+    background-color: x.$cinestar-primary-color;
+    border-radius: 0.2rem;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+.top-line-animation {
+  margin-bottom: -8px;
+  transform: rotateZ(45deg);
+}
+
+.middle-line-animation {
+  opacity: 0;
+}
+
+.bottom-line-animation {
+  margin-top: -8px;
+  transform: rotateZ(-45deg);
+}
+
+@media screen and (max-width: 1400px) {
+  .nav-section {
+    &__headline {
+      left: 3%;
+    }
+
+    &__nav-bar {
+      column-gap: 3rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .nav-section {
+    &__hamburger-menu {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .nav-section {
+    &__headline {
+      margin: 0 auto;
+    }
+
+    &__nav-bar {
+      position: absolute;
+      top: -17rem;
+      height: 15rem;
+      flex-direction: column;
+      row-gap: 1rem;
+    }
+
+    &__hamburger-menu {
+      display: flex;
+    }
+  }
+
+  .nav-animation {
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav-section {
+    &__headline {
+      font-size: 1.5rem;
+    }
+
+    &__nav-bar {
+      height: 13rem;
+    }
+
+    &__link {
+      font-size: 0.9rem;
+    }
+
+    &__line {
+      width: 1.5rem;
+      height: 3px;
+    }
+  }
+
+  .top-line-animation {
+    margin-bottom: -7px;
+  }
+
+  .bottom-line-animation {
+    margin-top: -7px;
+  }
+}

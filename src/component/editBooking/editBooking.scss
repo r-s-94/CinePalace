@@ -1,0 +1,569 @@
+@use "../../variables" as x;
+
+.edit-booking-movie-section {
+  &__back-button {
+    width: 2.3rem;
+    margin: 3rem 0 0 5%;
+    background-color: x.$cinestar-primary-color;
+    border: none;
+  }
+
+  &__headline-container {
+    margin-left: 15%;
+    display: flex;
+    column-gap: 3rem;
+  }
+
+  &__title,
+  &__hall {
+    padding: 1rem 3rem;
+    font-size: 1.1rem;
+    background-color: x.$cinestar-gray-color;
+    border-radius: 0.3rem;
+  }
+
+  &__headline {
+    margin: 3rem 0;
+    font-family: x.$cinestar-focus-font-art;
+    font-size: 2.3rem;
+    text-align: center;
+    color: x.$cinestar-secondary-color;
+  }
+
+  &__generally-info-headline {
+    color: x.$cinestar-gray-color;
+  }
+
+  &__booking-form {
+    width: 50%;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
+
+  &__snacks-and-drinks {
+    width: 60rem;
+    margin: 10rem auto;
+  }
+
+  &__snacks-and-drinks-headline {
+    margin-top: 3rem;
+    color: x.$cinestar-gray-color;
+  }
+
+  &__snacks-and-drinks-note {
+    margin: 1.5rem auto;
+    font-size: 1.1rem;
+    color: x.$cinestar-gray-color;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    column-gap: 0.5rem;
+  }
+
+  &__snack-icon,
+  &__drink-icon {
+    width: 2.1rem;
+  }
+
+  &__abo-snack-package {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+    row-gap: 1.5rem;
+  }
+
+  &__snack-cart {
+    padding: 1rem 1.5rem;
+    color: x.$cinestar-gray-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 2rem;
+    border: 1px solid x.$cinestar-gray-color2;
+    border-radius: 0.2rem;
+    box-shadow: 1px 1px 5px 3px #888;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__snack-cart:hover {
+    box-shadow: 1px 1px 5px 5px #888;
+  }
+
+  .active-snack-abo {
+    box-shadow: 1px 1px 5px 3px x.$cinestar-red-color;
+  }
+
+  &__main-description {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  &__price {
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  &__img-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 0.5rem;
+  }
+
+  &__snack-img,
+  &__drink-img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 0.2rem;
+  }
+
+  &__border {
+    width: 100%;
+    margin: 1.5rem 0;
+    border: 1px solid #555;
+    border-top-width: 1px;
+    border-left-width: none;
+    border-right-width: none;
+    border-bottom-width: none;
+  }
+
+  &__single-snacks {
+    padding: 3rem 0;
+    color: x.$cinestar-gray-color2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 3rem;
+    border: 1px solid x.$cinestar-gray-color2;
+    border-radius: 0.2rem;
+  }
+
+  /*&__snacks,
+  &__drinks {
+    
+    display: flex;
+  }*/
+
+  &__payment {
+    width: 55rem;
+    margin: 5rem auto 3rem auto;
+    color: x.$cinestar-gray-color2;
+  }
+
+  &__payment-headline {
+    margin: 3rem 0 3rem 4%;
+  }
+
+  &__payments {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 3rem;
+  }
+
+  &__booking-overview {
+    width: 53rem;
+    margin: 10rem auto;
+    color: white;
+    border: 1px solid white;
+  }
+
+  &__headlines {
+    text-align: center;
+  }
+
+  &__headlines,
+  &__infos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  &__overview-headline {
+    padding: 0.7rem 0;
+    font-size: 18px;
+    border: 1px solid white;
+  }
+
+  &__info,
+  &__seats,
+  &__snacks-and-drinks-overview,
+  &__info-payment,
+  &__calculate {
+    padding: 0.7rem 0;
+    display: flex;
+    justify-content: center;
+    border: 1px solid white;
+  }
+
+  &__info {
+    font-size: 1rem;
+  }
+
+  &__seats {
+  }
+
+  &__seat-info {
+    width: 75%;
+    margin: 0.5rem auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.1rem;
+  }
+
+  &__seat {
+    display: flex;
+    flex-direction: column;
+    column-gap: 0.3rem;
+  }
+
+  &__snacks-and-drinks-overview {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+  }
+
+  &__snack-package {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__snack-packages-overview,
+  &__snack-package-overview {
+    margin: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__single-snacks-overview,
+  &__single-snack-overview {
+    margin: 0.7rem 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__snack-packages-headline,
+  &__single-snacks-headline,
+  &__snack-package-headline,
+  &__single-snack-headline {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  &__detail {
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  &__snack-package,
+  &__single-snack {
+    margin: 0.5rem auto;
+  }
+
+  &__action-buttons {
+    margin: 5rem auto 10rem auto;
+    @include x.center-content();
+    column-gap: 5rem;
+  }
+
+  &__reset-button,
+  &__buy-ticket-button {
+    height: 2.7rem;
+    margin: 0;
+    font-size: 17px;
+    @include x.center-content();
+    column-gap: 0.5rem;
+    border-radius: 0.2rem;
+  }
+
+  &__reset-button {
+    width: 15rem;
+  }
+
+  &__buy-ticket-button {
+    width: 13rem;
+  }
+
+  &__reset-icon,
+  &__buy-ticket-icon {
+    width: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .edit-booking-movie-section {
+    &__booking-form {
+      width: 50rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .edit-booking-movie-section {
+    &__snacks-and-drinks {
+      width: 50rem;
+    }
+
+    &__img-container {
+      grid-template-columns: auto auto;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .edit-booking-movie-section {
+    &__back-button {
+      width: 2rem;
+    }
+
+    &__headline-container {
+      margin-top: 2rem;
+    }
+
+    &__title,
+    &__hall {
+      padding: 0.7rem 2rem;
+      font-size: 1rem;
+    }
+
+    &__headline {
+      font-size: 2rem;
+    }
+
+    &__booking-form {
+      width: 35rem;
+    }
+
+    &__snacks-and-drinks-headline {
+      font-size: 1.1rem;
+    }
+
+    &__snack-icon,
+    &__drink-icon {
+      width: 1.7rem;
+    }
+
+    &__snacks-and-drinks {
+      width: 35rem;
+    }
+
+    &__snacks-and-drinks-note {
+      font-size: 1rem;
+    }
+
+    &__abo-snack-package {
+      grid-template-columns: 1fr;
+    }
+
+    &__title-line,
+    &__price {
+      font-size: 17px;
+    }
+
+    &__description {
+      font-size: 1rem;
+    }
+
+    &__img-container {
+      grid-template-columns: auto auto auto;
+    }
+
+    &__payment {
+      width: 37rem;
+    }
+
+    &__payment-headline {
+      margin-left: 8%;
+      font-size: 15px;
+    }
+
+    &__payments {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    &__booking-overview {
+      width: 30rem;
+      max-width: 90%;
+      margin: 5rem auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__overview-headline {
+      font-size: 2rem;
+    }
+
+    &__headlines {
+      display: none;
+    }
+
+    &__infos {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__action-buttons {
+      margin: 3rem auto 7rem auto;
+    }
+
+    &__reset-button,
+    &__buy-ticket-button {
+      height: 2.5rem;
+      font-size: 15px;
+    }
+
+    &__reset-button {
+      width: 13rem;
+    }
+
+    &__buy-ticket-button {
+      width: 11rem;
+    }
+
+    &__reset-icon,
+    &__buy-ticket-icon {
+      width: 1.3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .edit-booking-movie-section {
+    &__back-button {
+      width: 1.7rem;
+    }
+
+    &__headline-container {
+      margin-top: 2rem;
+      column-gap: 1rem;
+    }
+
+    &__title,
+    &__hall {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    &__headline {
+      font-size: 1.7rem;
+    }
+
+    &__booking-form {
+      width: 18.3rem;
+      height: 40rem;
+    }
+
+    &__snacks-and-drinks {
+      width: 17rem;
+      margin: 5rem auto 0 auto;
+    }
+
+    &__snacks-and-drinks-headline {
+      font-size: 1rem;
+    }
+
+    &__snack-icon,
+    &__drink-icon {
+      width: 1.5rem;
+    }
+
+    &__snack-img,
+    &__drink-img {
+      width: 4rem;
+      height: 4rem;
+    }
+
+    &__snacks-and-drinks-note {
+      font-size: 0.9rem;
+    }
+
+    &__snack-cart {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+    }
+
+    &__title-line,
+    &__price {
+      font-size: 1rem;
+    }
+
+    &__description {
+      font-size: 15px;
+    }
+
+    &__single-snacks {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &__payment {
+      width: 17rem;
+      margin: 0 auto 3rem auto;
+    }
+
+    &__payment-headline {
+      margin-left: 3%;
+      font-size: 14px;
+    }
+
+    &__payments {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    &__booking-overview {
+      width: 17rem;
+      max-width: 90%;
+      margin: 3rem auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__headline {
+      font-size: 1.7rem;
+    }
+
+    &__info,
+    &__hall-info,
+    &__row,
+    &__seat,
+    &__title,
+    &__price,
+    &__single-snack-title,
+    &__size,
+    &__single-snack-price,
+    &__info-payment,
+    &__calculate {
+      font-size: 0.9rem;
+    }
+
+    &__snack-package-headline,
+    &__snack-packages-headline,
+    &__single-snack-headline,
+    &__single-snacks-headline {
+      font-size: 15.7px;
+    }
+
+    &__action-buttons {
+      width: 12rem;
+      margin: 1rem auto 5rem auto;
+      @include x.center-column-content();
+      row-gap: 1rem;
+    }
+
+    &__reset-button,
+    &__buy-ticket-button {
+      width: 100%;
+      height: 2.3rem;
+      font-size: 14px;
+    }
+
+    &__reset-icon,
+    &__buy-ticket-icon {
+      width: 1.2rem;
+    }
+  }
+}

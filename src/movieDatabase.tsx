@@ -24,6 +24,8 @@ export interface Film {
   description: FilmDescription;
   pictureArray: string[];
   hall: number;
+  index: number;
+  rotatePosition: number;
   styleClass: string;
 }
 
@@ -36,11 +38,11 @@ export const filmArray: Film[] = [
   {
     id: 1,
     title: "Space Wars",
-    category: "Science-Fiction",
+    category: "Science-Fiction Film",
     description: {
       short: "",
       generally: `In einer weit entfernten Galaxie, in der unzählige Planeten und hoch entwickelte Spezies leben,
-                  bahnt sich ein Konflikt an, der alles zu verändern.
+                  bahnt sich ein Konflikt an, der alles zu verändern droht.
                   
                   Die Menschheit hat sich längst über ihren Heimatplaneten Cortun hinaus entwicklet. Über Generationen
                   hinweg wurden neue Welten erschlossen und passten sich an die jeweiligen Bedingungen an.
@@ -64,6 +66,8 @@ export const filmArray: Film[] = [
       SpaceWarsMoviePicture6,
     ],
     hall: 1,
+    index: 0,
+    rotatePosition: 360,
     styleClass: "film-cart",
   },
   {
@@ -73,7 +77,7 @@ export const filmArray: Film[] = [
     description: {
       short: "",
       generally: `Im Herzen von New York, wo die Bühnen des Broadwasy seit Generationen Geschichte zum Leben erwecken,
-                  steht ein traditionsreichen Theater vor einer entscheidenden Herausforderung. 
+                  steht ein traditionsreiches Theater vor einer entscheidenden Herausforderung. 
                   
                   Unter der Leitung eines erfahrenen Theaterdirektors Malik Deshawn versammelt sich ein neues Ensemble
                   aus talentierten Künstlern, die unterschiedlicher nicht sein könnten. 
@@ -94,6 +98,8 @@ export const filmArray: Film[] = [
       MusicalMoviePicture4,
     ],
     hall: 1,
+    index: 1,
+    rotatePosition: 288,
     styleClass: "film-cart2",
   },
   {
@@ -103,7 +109,7 @@ export const filmArray: Film[] = [
     description: {
       short: "",
       generally: `Der christliche Afroamereikaner Jalen Trevon, Schüler der Coren Middle School träumt davon, eines Tages
-                  Footbalspieler zu werden und auf einem einem großen Spielfeld mit tausenden Zuschauern zu stehen.
+                  Footbalspieler zu werden und auf einem großen Spielfeld mit tausenden Zuschauern zu stehen.
                   Um diesem Ziel näherzukommen, muss er es ins Team der Strong Coren schaffen, sich dort beweisen, familiäre
                   Hürden überwinden und seinen Beitrag leisten, um das Team zum Erfolg zu führen.
                   
@@ -119,10 +125,10 @@ export const filmArray: Film[] = [
                   wird. Aufgrund von üblen Lügen und Gerüchten geräte auch seine Beziehung zu Amira zunehmend ins Wanken und 
                   beginnt zu leiden. Trotz dieser Rückschläge gibt Jalen nicht auf. Er steht seiner Familie bei, 
                   sucht Halt im Glauben und lässt sich nicht von seinem Weg abbringen. Er trainert weiter, 
-                  wächst an seinen Herausforderungen und bleibt anseinem Ziel treue, während das entscheidende Spiel immer näher rückt. 
+                  wächst an seinen Herausforderungen und bleibt an seinem Ziel treu, während das entscheidende Spiel immer näher rückt. 
                   
                   Trotz der vergangenen Höhen und Tiefen sowie auch der Schicksalsschläge der letzten Wochen 
-                  und Monate ist der entscheidende Tag gekommen: das Grße Finale. Jalen stellt sich gemeinsam mit seinem Team dem 
+                  und Monate ist der entscheidende Tag gekommen: das Große Finale. Jalen stellt sich gemeinsam mit seinem Team dem 
                   wichtigsten Spiel seiner bisherigen Laufbahn und gibt dort alles. Im Verlauf des Spiels kommt es zu überraschenden
                   Entwicklungen und Wendungen. Die lokale Gang sowie auch einige beteiligte Spieler werden durch das Eingreifen der Behörden
                   gestoppt und zur Rechenschaft gezogen. Gleichzeitig klären sich die Lügen und Gerüchte um Jalen auf, wodurch 
@@ -135,6 +141,8 @@ export const filmArray: Film[] = [
     },
     pictureArray: [TragikomödieMoviePicture, TragikomödieMoviePicture2],
     hall: 2,
+    index: 2,
+    rotatePosition: 216,
     styleClass: "film-cart3",
   },
   {
@@ -149,7 +157,7 @@ export const filmArray: Film[] = [
                   
                   Während Jesus durch seine Worte und Taten immer mehr Menschen erreicht, verbreitet sich eine Botschaft von Liebe,
                   Vergebung, und Hoffnung über die Grenze hinaus. Kranke werden geheilt, Zweifelnde finden neuen Glauben und immer 
-                  mehr Menschenschließen sich ihm an. Doch mit wachsender Anhängerschaft wächst auch der Widerstandt. Religiöse
+                  mehr Menschen schließen sich ihm an. Doch mit wachsender Anhängerschaft wächst auch der Widerstandt. Religiöse
                   und politische Kräfte sehen in ihm eine Bedrohung für die bestehende Ordnung. Misstrauen und Angst führen zu
                   Intrigen, die im Verborgenen gesponen werden. Selbst innerhalb seines engsten Kreises entstehen Zweifel.
                   Einer seiner Vertrauten trifft schließlich eine folgenschwere Entscheidung, die alles verändern wird.
@@ -170,12 +178,14 @@ export const filmArray: Film[] = [
       DramaMoviePicture4,
     ],
     hall: 2,
+    index: 3,
+    rotatePosition: 144,
     styleClass: "film-cart4",
   },
   {
     id: 5,
     title: "ES 4",
-    category: "Horror",
+    category: "Horror Film",
     description: {
       short: "",
       generally: `Tauche ein in das nächste Kapitel des Grauens: ES - Kapitel 4: Das Erwachen. Nach den schrecklichen Ereignissen
@@ -190,7 +200,7 @@ export const filmArray: Film[] = [
                   und erkennt, dass das Böse nicht nur zurückgekehrt ist, sondern stärker und grausamer als je zuvor ist. Während
                   die Grenzen zwischen Realität und Albtraum verschwimmen, beginnt ein tödliches Spiel aus Angst und Manipulation.
                   Der Clown nutzt die tiefsten Ängste seiner Opfer, um sie in seine Welt zu ziehen - eine Welt, aus der es kein
-                  Entkommen zu geben schein.
+                  Entkommen zu geben scheint.
                   
                   Im finalen Aufeinandertreffen müssen sich die Überlebenden nicht nur dem Schrecken stellen, sondern auch ihren
                   eigenen inneren Dämonen. Denn nur wer seine Angst überwindet, hat eine Chance, das Grauen zu besiegen. Doch eine
@@ -198,6 +208,8 @@ export const filmArray: Film[] = [
     },
     pictureArray: [HorrorMoviePicture, HorrorMoviePicture2],
     hall: 3,
+    index: 4,
+    rotatePosition: 72,
     styleClass: "film-cart5",
   },
 ];
