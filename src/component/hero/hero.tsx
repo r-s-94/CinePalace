@@ -10,7 +10,7 @@ export default function Hero() {
       <h1 className="hero-section__headline">CinePalace</h1>
 
       <p className="hero-section__slogan">
-        Entertainment im Las Vegas Style erleben.
+        Hollywood auf der Leinwand. Entertainment auf höchstem Niveau.
       </p>
 
       <a href="#slider" className="hero-section__movie-link no-link">
