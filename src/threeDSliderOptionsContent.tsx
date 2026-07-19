@@ -10,7 +10,7 @@ export interface ThreeDSliderOptions {
   currentRotatePosition: number;
 }
 
-export const threeDSliderOptionsContent =
+export const ThreeDSliderOptionsContent =
   createContext<CurrentSliderIndexDatatype>({
     threeDSliderOptions: {
       currentSliderIndex: -1,

@@ -7,12 +7,12 @@ export default function BackToTop() {
   const [interaction, setInteraction] = useState<boolean>(true);
 
   useEffect(() => {
+    window.addEventListener("scroll", handleScrollEvents);
+
     return () => {
       window.removeEventListener("scroll", handleScrollEvents);
     };
   }, []);
-
-  window.addEventListener("scroll", handleScrollEvents);
 
   function handleScrollEvents() {
     console.log(window.pageYOffset);

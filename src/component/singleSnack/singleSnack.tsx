@@ -58,8 +58,6 @@ export default function SingleSnack({
       <select
         name=""
         onChange={(event) => {
-          //const oneLetter = event.target.value.slice(1, 2);
-          //const twoLetter = event.target.value.slice(1, 3);
           const allOptions = event.target.value.slice(1, 4);
           addSingleSnack(event.target.value);
 

@@ -137,3 +137,8 @@ $cinestar-red-color: #c62839;
 .no-hover:hover {
   cursor: context-menu;
 }
+
+.active-snack-abo,
+.active-payment {
+  box-shadow: 1px 1px 5px 3px $cinestar-red-color;
+}

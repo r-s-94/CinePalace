@@ -2,13 +2,13 @@ import { useContext, useEffect } from "react";
 import "./bookingOverview.scss";
 import "../../variables.scss";
 import Nav from "../nav/nav";
-import { bookingsContent, type Ticket } from "../../bookingsContent";
+import { BookingsContent, type Ticket } from "../../bookingsContent";
 import { useNavigate } from "react-router";
-import { LOCAL_STORAGE_KEY } from "../../App";
+import { LOCAL_STORAGE_KEY } from "../../storatgeKey";
 import Footer from "../footer/footer";
 
 export default function BookingOverview() {
-  const { bookings, setBookings } = useContext(bookingsContent);
+  const { bookings, setBookings } = useContext(BookingsContent);
   const navigation = useNavigate();
 
   useEffect(() => {
@@ -60,7 +60,7 @@ export default function BookingOverview() {
       <Nav />
       <h2 className="booking-overview-section__headline">Buchungen</h2>
 
-      {bookings.length > 0 && (
+      {bookings.length > 0 ? (
         <div className="booking-overview-section__booking-overview">
           <div className="booking-overview-section__headlines">
             <h3 className="booking-overview-section__overview-headline">
@@ -306,6 +306,8 @@ export default function BookingOverview() {
             </div>
           ))}
         </div>
+      ) : (
+        "Noch keinen Film gebucht"
       )}
       <Footer />
     </section>

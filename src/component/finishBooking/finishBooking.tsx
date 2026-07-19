@@ -3,12 +3,12 @@ import Nav from "../nav/nav";
 import "./finishBooking.scss";
 import "../../variables.scss";
 import { useContext, useEffect } from "react";
-import { threeDSliderOptionsContent } from "../../threeDSliderOptionsContent";
+import { ThreeDSliderOptionsContent } from "../../threeDSliderOptionsContent";
 import Footer from "../footer/footer";
 
 export default function FinishBooking() {
   const { threeDSliderOptions, setThreeDSliderOptions } = useContext(
-    threeDSliderOptionsContent,
+    ThreeDSliderOptionsContent,
   );
 
   useEffect(() => {

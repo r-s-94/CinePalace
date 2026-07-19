@@ -5,7 +5,7 @@ import Nav from "../nav/nav";
 import { useContext, useEffect, useState } from "react";
 import { filmArray, type Film } from "../../movieDatabase";
 import Footer from "../footer/footer";
-import { threeDSliderOptionsContent } from "../../threeDSliderOptionsContent";
+import { ThreeDSliderOptionsContent } from "../../threeDSliderOptionsContent";
 
 export default function MovieDetail() {
   const { id } = useParams();
@@ -27,7 +27,7 @@ export default function MovieDetail() {
   const [sliderIndex, setSliderIndex] = useState<number>(0);
 
   const { threeDSliderOptions, setThreeDSliderOptions } = useContext(
-    threeDSliderOptionsContent,
+    ThreeDSliderOptionsContent,
   );
 
   useEffect(() => {

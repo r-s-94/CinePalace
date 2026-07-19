@@ -38,7 +38,7 @@ export interface SingleSnackBooking {
   quantity: number;
 }
 
-export const bookingsContent = createContext<Bookings>({
+export const BookingsContent = createContext<Bookings>({
   bookings: [],
   setBookings: () => {},
 });

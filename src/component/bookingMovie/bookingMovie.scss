@@ -67,6 +67,18 @@
     width: 2.1rem;
   }
 
+  &__booking-snack {
+    padding: 0.2rem 0.3rem;
+    background-color: x.$cinestar-gray-color2;
+    color: black;
+    border-radius: 0.3rem;
+    transition: all ease-in-out 0.3s;
+  }
+
+  &__booking-snack:hover {
+    box-shadow: 1px 1px 5px 5px #888;
+  }
+
   &__abo-snack-package {
     margin-top: 3rem;
     display: grid;
@@ -84,16 +96,11 @@
     column-gap: 2rem;
     border: 1px solid x.$cinestar-gray-color2;
     border-radius: 0.2rem;
-    box-shadow: 1px 1px 5px 3px #888;
     transition: all 0.3s ease-in-out;
   }
 
   &__snack-cart:hover {
     box-shadow: 1px 1px 5px 5px #888;
-  }
-
-  .active-snack-abo {
-    box-shadow: 1px 1px 5px 3px x.$cinestar-red-color;
   }
 
   &__main-description {

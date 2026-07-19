@@ -4,13 +4,13 @@ import "../../index.scss";
 import "../../variables.scss";
 import "./threedSlider.scss";
 import { useNavigate } from "react-router";
-import { threeDSliderOptionsContent } from "../../threeDSliderOptionsContent";
+import { ThreeDSliderOptionsContent } from "../../threeDSliderOptionsContent";
 
 export default function ThreeDSlider() {
   const [sliderDeg, setSliderDeg] = useState<number>(0);
   const [sliderIndex, setSliderIndex] = useState<number>(0);
   const navigation = useNavigate();
-  const { threeDSliderOptions } = useContext(threeDSliderOptionsContent);
+  const { threeDSliderOptions } = useContext(ThreeDSliderOptionsContent);
 
   useEffect(() => {
     if (threeDSliderOptions.currentSliderIndex !== -1) {

@@ -58,7 +58,7 @@ export const hall1: Hall = {
       price: 11,
     },
     {
-      id: 11,
+      id: 13,
       hall: 1,
       row: "A",
       type: "ss",
@@ -88,7 +88,7 @@ export const hall1: Hall = {
   b: [
     { id: 16, hall: 1, row: "B", type: "ss", seat: 1, seat2: 0, price: 11 },
     { id: 17, hall: 1, row: "B", type: "ss", seat: 2, seat2: 0, price: 11 },
-    { id: 15, hall: 1, row: "B", type: "ss", seat: 3, seat2: 0, price: 11 },
+    { id: 18, hall: 1, row: "B", type: "ss", seat: 3, seat2: 0, price: 11 },
     { id: 19, hall: 1, row: "B", type: "ss", seat: 4, seat2: 0, price: 11 },
     { id: 20, hall: 1, row: "B", type: "ss", seat: 5, seat2: 0, price: 11 },
     { id: 21, hall: 1, row: "B", type: "ss", seat: 6, seat2: 0, price: 11 },
@@ -318,7 +318,7 @@ export const hall1: Hall = {
       price: 11,
     },
     {
-      id: 74,
+      id: 73,
       hall: 1,
       row: "E",
       type: "ss",
@@ -327,7 +327,7 @@ export const hall1: Hall = {
       price: 11,
     },
     {
-      id: 73,
+      id: 74,
       hall: 1,
       row: "E",
       type: "ss",
@@ -540,7 +540,7 @@ export const hall1: Hall = {
       price: 15,
     },
     {
-      id: 111,
+      id: 113,
       hall: 1,
       row: "H",
       type: "ds",
@@ -635,7 +635,7 @@ export const hall2: Hall = {
       price: 11,
     },
     {
-      id: 11,
+      id: 13,
       hall: 2,
       row: "A",
       type: "ss",
@@ -665,7 +665,7 @@ export const hall2: Hall = {
   b: [
     { id: 16, hall: 2, row: "B", type: "ss", seat: 1, seat2: 0, price: 11 },
     { id: 17, hall: 2, row: "B", type: "ss", seat: 2, seat2: 0, price: 11 },
-    { id: 15, hall: 2, row: "B", type: "ss", seat: 3, seat2: 0, price: 11 },
+    { id: 18, hall: 2, row: "B", type: "ss", seat: 3, seat2: 0, price: 11 },
     { id: 19, hall: 2, row: "B", type: "ss", seat: 4, seat2: 0, price: 11 },
     { id: 20, hall: 2, row: "B", type: "ss", seat: 5, seat2: 0, price: 11 },
     { id: 21, hall: 2, row: "B", type: "ss", seat: 6, seat2: 0, price: 11 },
@@ -895,7 +895,7 @@ export const hall2: Hall = {
       price: 11,
     },
     {
-      id: 74,
+      id: 73,
       hall: 2,
       row: "E",
       type: "ss",
@@ -904,7 +904,7 @@ export const hall2: Hall = {
       price: 11,
     },
     {
-      id: 73,
+      id: 74,
       hall: 2,
       row: "E",
       type: "ss",
@@ -1221,7 +1221,7 @@ export const hall3: Hall = {
       price: 11,
     },
     {
-      id: 11,
+      id: 13,
       hall: 3,
       row: "A",
       type: "ss",
@@ -1251,7 +1251,7 @@ export const hall3: Hall = {
   b: [
     { id: 16, hall: 3, row: "B", type: "ss", seat: 1, seat2: 0, price: 11 },
     { id: 17, hall: 3, row: "B", type: "ss", seat: 2, seat2: 0, price: 11 },
-    { id: 15, hall: 3, row: "B", type: "ss", seat: 3, seat2: 0, price: 11 },
+    { id: 18, hall: 3, row: "B", type: "ss", seat: 3, seat2: 0, price: 11 },
     { id: 19, hall: 3, row: "B", type: "ss", seat: 4, seat2: 0, price: 11 },
     { id: 20, hall: 3, row: "B", type: "ss", seat: 5, seat2: 0, price: 11 },
     { id: 21, hall: 3, row: "B", type: "ss", seat: 6, seat2: 0, price: 11 },
@@ -1481,7 +1481,7 @@ export const hall3: Hall = {
       price: 11,
     },
     {
-      id: 74,
+      id: 73,
       hall: 3,
       row: "E",
       type: "ss",
@@ -1490,7 +1490,7 @@ export const hall3: Hall = {
       price: 11,
     },
     {
-      id: 73,
+      id: 74,
       hall: 3,
       row: "E",
       type: "ss",
@@ -1748,7 +1748,7 @@ export const hall3: Hall = {
       price: 11,
     },
     {
-      id: 115,
+      id: 118,
       hall: 3,
       row: "H",
       type: "ss",

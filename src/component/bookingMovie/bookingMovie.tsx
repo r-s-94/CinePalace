@@ -13,18 +13,17 @@ import { type Hall } from "../../cinemaHallDatabase";
 import { singleSnacks, snackPackage } from "../../snackDatabase";
 import { payments } from "../../paymentsDatabase";
 import {
-  bookingsContent,
+  BookingsContent,
   type SingleSnackBooking,
   type Ticket,
 } from "../../bookingsContent";
-import { LOCAL_STORAGE_KEY } from "../../App";
+import { LOCAL_STORAGE_KEY } from "../../storatgeKey";
 import BackToTop from "../backToTop/backToTop";
-import { threeDSliderOptionsContent } from "../../threeDSliderOptionsContent";
-export type RowKey = "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h";
+import { ThreeDSliderOptionsContent } from "../../threeDSliderOptionsContent";
+import type { RowKey, SinglesnackOffer } from "../../rowKey";
+import { calculateBooking } from "../bookingFunctions/bookingFunctions";
 
 export default function BookingMovie() {
-  type SinglesnackOffer = "s" | "m" | "l" | "xl";
-
   const { id } = useParams();
   const navigation = useNavigate();
   const [booking, setBooking] = useState<Ticket>({
@@ -35,7 +34,7 @@ export default function BookingMovie() {
     singleSnack: [],
     payment: "",
   });
-  const { bookings, setBookings } = useContext(bookingsContent);
+  const { bookings, setBookings } = useContext(BookingsContent);
 
   /*
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
@@ -57,9 +56,8 @@ export default function BookingMovie() {
   });
 
   const [showSnacksDrinks, setShowSnacksDrinks] = useState<boolean>(false);
-  const [paymentsStatus, setPaymentsStatus] = useState<string>("");
   const { threeDSliderOptions, setThreeDSliderOptions } = useContext(
-    threeDSliderOptionsContent,
+    ThreeDSliderOptionsContent,
   );
 
   useEffect(() => {
@@ -121,10 +119,6 @@ export default function BookingMovie() {
       return seat.id === id;
     });
 
-    /*const findSeat = hall[currentRow].find((seat) => {
-      return seat.id === id;
-    });*/
-
     if (selectedSeat?.id) {
       const filteredSeat = booking.seats.filter((seat) => {
         return seat.id !== selectedSeat.id;
@@ -150,10 +144,9 @@ export default function BookingMovie() {
         snackPackage: [],
         singleSnack: [],
       });
-      setShowSnacksDrinks(!showSnacksDrinks);
-    } else {
-      setShowSnacksDrinks(!showSnacksDrinks);
     }
+
+    setShowSnacksDrinks(!showSnacksDrinks);
   }
 
   function addSnackPackage(id: number) {
@@ -191,11 +184,7 @@ export default function BookingMovie() {
     const currentSingleSnackArray = booking.singleSnack;
     //console.log(singleSnackInfo);
     const id = Number(singleSnackInfo.slice(0, 1));
-    /*const s = singleSnackInfo.slice(1, 2);
-    const m = singleSnackInfo.slice(1, 2);
-    const l = singleSnackInfo.slice(1, 2);
-    const xl = singleSnackInfo.slice(1, 4);*/
-    //const oneLetter = singleSnackInfo.slice(1, 2);
+
     const twoLetter = singleSnackInfo.slice(1, 3);
     const allOptions = singleSnackInfo.slice(1, 4);
 
@@ -266,12 +255,6 @@ export default function BookingMovie() {
         });
       }
     }
-
-    /*if (s === "s" || m === "m" || l === "l" || xl === "xl") {
-      console.log("Check");
-    } else {
-      console.log("Check2");
-    }*/
   }
 
   function updateQuantity(id: number, quantity: number) {
@@ -305,31 +288,6 @@ export default function BookingMovie() {
 
   function addPayment(type: string) {
     setBooking({ ...booking, payment: type });
-    setPaymentsStatus(type);
-  }
-
-  function calculateBooking(booking: Ticket) {
-    let totalSum = 0;
-
-    const seatCalculation = booking.seats.reduce(
-      (sum, seat) => sum + seat.price,
-      0,
-    );
-
-    const snackPackageCalculation = booking.snackPackage.reduce(
-      (sum, snackPackage) => sum + snackPackage.price,
-      0,
-    );
-
-    const singleSnackCalculation = booking.singleSnack.reduce(
-      (sum, singleSnack) => sum + singleSnack.price * singleSnack.quantity,
-      0,
-    );
-
-    totalSum =
-      seatCalculation + snackPackageCalculation + singleSnackCalculation;
-
-    return totalSum;
   }
 
   function saveBooking() {
@@ -422,16 +380,14 @@ export default function BookingMovie() {
             className="booking-movie-section__drink-icon"
             alt=""
           />
-          <input
-            type="checkbox"
-            onChange={() => {
+          <div
+            onClick={() => {
               resetSnack(showSnacksDrinks);
             }}
-            className="hover"
-            name=""
-            id=""
-          />
-          Online buchen
+            className={`booking-movie-section__booking-snack hover ${booking.snackPackage.length !== 0 || booking.snackPackage.length !== 0 ? "active-snack-abo" : ""}`}
+          >
+            Online buchen
+          </div>
         </div>
         {showSnacksDrinks && (
           <div className="booking-movie-section__choose-snack-and-drink">
@@ -508,9 +464,8 @@ export default function BookingMovie() {
                 addPayment(payment.title);
               }}
               title={payment.title}
-              status={paymentsStatus}
+              currentPayment={booking.payment}
               img={payment.img}
-              booking={booking}
             />
           ))}
         </div>

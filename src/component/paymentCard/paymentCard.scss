@@ -8,6 +8,7 @@
   @include x.center-content();
   column-gap: 1.5rem;
   border-radius: 0.2rem;
+  transition: all ease-in-out 0.3s;
 
   &__img {
     width: 6rem;
@@ -15,6 +16,10 @@
     object-fit: cover;
     border-radius: 50%;
   }
+}
+
+.payment-card:hover {
+  box-shadow: 1px 1px 5px 3px #888;
 }
 
 @media screen and (max-width: 1000px) {
