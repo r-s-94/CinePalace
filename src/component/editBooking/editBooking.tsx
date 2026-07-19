@@ -413,7 +413,7 @@ export default function EditBooking() {
             onClick={() => {
               resetSnack(showSnacksDrinks);
             }}
-            className={`edit-booking-movie-section__booking-snack hover ${booking.snackPackage.length !== 0 || booking.singleSnack.length !== 0 ? "active-snack-abo" : ""}`}
+            className={`edit-booking-movie-section__booking-snack-label hover ${booking.snackPackage.length !== 0 || booking.singleSnack.length !== 0 ? "active-snack-abo" : ""}`}
           >
             Online buchen
           </div>
