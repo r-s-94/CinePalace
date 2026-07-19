@@ -314,8 +314,27 @@
       width: 50rem;
     }
 
+    &__snacks-and-drinks-headline {
+      font-size: 1.3rem;
+    }
+
+    &__snack-icon,
+    &__drink-icon {
+      width: 2rem;
+    }
+
+    &__booking-snack-label {
+      padding: 0.3rem 0.4rem;
+      font-size: 1.3rem;
+    }
+
     &__img-container {
       grid-template-columns: auto auto;
+    }
+
+    &__payment-headline {
+      margin-left: 4%;
+      font-size: 1.3rem;
     }
   }
 }
@@ -345,17 +364,17 @@
     }
 
     &__snacks-and-drinks-headline {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
     }
 
     &__snack-icon,
     &__drink-icon {
-      width: 2rem;
+      width: 2.5rem;
     }
 
     &__booking-snack-label {
-      padding: 0.2rem 0.3rem;
-      font-size: 1.1rem;
+      padding: 0.3rem 0.4rem;
+      font-size: 1.3rem;
     }
 
     &__snacks-and-drinks {
@@ -389,7 +408,7 @@
 
     &__payment-headline {
       margin-left: 8%;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
     }
 
     &__payments {
