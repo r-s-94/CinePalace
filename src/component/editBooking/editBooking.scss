@@ -67,7 +67,7 @@
     width: 2.1rem;
   }
 
-  &__booking-snack {
+  &__booking-snack-label {
     padding: 0.2rem 0.3rem;
     background-color: x.$cinestar-gray-color2;
     color: black;
@@ -212,9 +212,6 @@
     font-size: 1rem;
   }
 
-  &__seats {
-  }
-
   &__seat-info {
     width: 75%;
     margin: 0.5rem auto;
@@ -356,6 +353,11 @@
       width: 1.7rem;
     }
 
+    &__booking-snack-label {
+      padding: 0.2rem 0.3rem;
+      font-size: 1.1rem;
+    }
+
     &__snacks-and-drinks {
       width: 35rem;
     }
@@ -387,7 +389,7 @@
 
     &__payment-headline {
       margin-left: 8%;
-      font-size: 15px;
+      font-size: 1.1rem;
     }
 
     &__payments {
@@ -473,12 +475,16 @@
     }
 
     &__snacks-and-drinks-headline {
-      font-size: 1rem;
+      font-size: 1.1rem;
     }
 
     &__snack-icon,
     &__drink-icon {
-      width: 1.5rem;
+      width: 1.7rem;
+    }
+
+    &__booking-snack-label {
+      font-size: 15px;
     }
 
     &__snack-img,
@@ -523,6 +529,7 @@
     &__payments {
       width: 100%;
       margin: 0 auto;
+      row-gap: 1.5rem;
     }
 
     &__booking-overview {
