@@ -4,7 +4,7 @@ import "./cinemaHall.scss";
 import DoubleSeat from "../doubleSeat/doubleSeat";
 import SingleSeat from "../singleSeat/singleSeat";
 import Canvas from "../canvas/canvas";
-import type { RowKey } from "../bookingMovie/bookingMovie";
+import type { RowKey } from "../../rowKey";
 
 export default function CinemaHall({
   hall,
