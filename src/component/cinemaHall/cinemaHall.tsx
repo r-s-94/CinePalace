@@ -15,50 +15,69 @@ export default function CinemaHall({
   booking: Ticket;
   chooseSeat: (id: number, hall: Hall, row: string) => void;
 }) {
+  let hallChoose: Hall = {
+    a: [],
+    b: [],
+    c: [],
+    d: [],
+    e: [],
+    f: [],
+    g: [],
+    h: [],
+  };
+  let rows: string[] = [];
+
   if (hall === 1) {
-    const rows = Object.keys(hall1);
-
-    return (
-      <div className="hall hall1">
-        <Canvas />
-
-        {rows.map((row) => (
-          <div className="row">
-            <span className="row-letter">{row.toLocaleUpperCase()}</span>
-            {hall1[row as RowKey].map((seat) =>
-              seat.type === "ds" ? (
-                <DoubleSeat
-                  id={seat.id}
-                  seat={seat.seat}
-                  seat2={seat.seat2}
-                  booking={booking}
-                  chooseSeat={() => {
-                    chooseSeat(seat.id, hall1, seat.row);
-                  }}
-                />
-              ) : (
-                <SingleSeat
-                  id={seat.id}
-                  seat={seat.seat}
-                  seat2={seat.seat2}
-                  booking={booking}
-                  chooseSeat={() => {
-                    chooseSeat(seat.id, hall1, seat.row);
-                  }}
-                />
-              ),
-            )}
-          </div>
-        ))}
-      </div>
-    );
-
-    /* 
-     
-    */
+    hallChoose = hall1;
+    rows = Object.keys(hall1);
   }
 
   if (hall === 2) {
+    hallChoose = hall2;
+    rows = Object.keys(hall2);
+  }
+
+  if (hall === 3) {
+    hallChoose = hall3;
+    rows = Object.keys(hall2);
+  }
+
+  return (
+    <div className="hall">
+      <Canvas />
+
+      {rows.map((row) => (
+        <div className="row">
+          <span className="row-letter">{row.toLocaleUpperCase()}</span>
+          {hallChoose[row as RowKey].map((seat) =>
+            seat.type === "ds" ? (
+              <DoubleSeat
+                id={seat.id}
+                seat={seat.seat}
+                seat2={seat.seat2}
+                booking={booking}
+                chooseSeat={() => {
+                  chooseSeat(seat.id, hall1, seat.row);
+                }}
+              />
+            ) : (
+              <SingleSeat
+                id={seat.id}
+                seat={seat.seat}
+                seat2={seat.seat2}
+                booking={booking}
+                chooseSeat={() => {
+                  chooseSeat(seat.id, hall1, seat.row);
+                }}
+              />
+            ),
+          )}
+        </div>
+      ))}
+    </div>
+  );
+
+  /*if (hall === 2) {
     const rows = Object.keys(hall2);
 
     return (
@@ -132,9 +151,5 @@ export default function CinemaHall({
         ))}
       </div>
     );
-  }
-
-  /*
-  
-*/
+  }*/
 }
